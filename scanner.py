@@ -1,10 +1,13 @@
 #!/bin/python
 
-import sys
+import sys,os
 import socket
+from sys import platform
 from datetime import datetime
-count=0
 
+count=0
+if platform == "linux" or platform == "linux2":
+	os.system("figlet PORT SCANNER")
 try:
 	target=socket.gethostbyname(sys.argv[1])
 	try:
